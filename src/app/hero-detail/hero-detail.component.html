@@ -1,0 +1,13 @@
+<ng-container *ngIf="hero$ | async as hero">
+
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Input</mat-label>
+      <input matInput [(ngModel)]="hero.name" placeholder="name">
+    </mat-form-field>
+  </div>
+  <button mat-button (click)="onBack()"
+  class="mat-focus-indicator docs-button mat-raised-button mat-button-base mat-accent">Back</button>
+</ng-container>
